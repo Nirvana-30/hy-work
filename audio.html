@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易云音乐</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href="playlist.js" rel="stylesheet" type="text/css">
+</head>
+<body onselect="return false">
+    <div class="header">
+        <div class="menu-logo"><img src="./images/netease-logo.png" alt=""></div>
+        <div class="menu-btngroups">
+            <a href="javascript:history.go(-1);" class="btn-backward">
+                <i class="fa-angle-left" aria-hidden="true"><</i>
+            </a>
+            <a class="btn-forward" href="javascript:history.go(+1);">
+                <i class="fa-angle-right">></i>
+            </a>
+        </div>
+        <div class="menu-search">
+            <input type="text" placeholder="搜索" id="search-inp"onkeydown="enterKey()">
+            <span class="search-btn">
+                <i class="fa-search" aria-hidden="true"></i>
+            </span>
+        </div>
+        <div class="denglu">
+            <img src="./images/user_face.png" alt="" >
+            <a href="javascript:void(0);">
+                <i class="un-denglu" aria-hidden="true" onclick="showDiv()">未登录</i>
+            </a>
+            <a href="javascript:void(0);">
+                <i class="vip" aria-hidden="true">开通vip</i>
+            </a>
+        </div>
+    </div>
+    <div class="into">
+        <div class="phone">
+            <p class="p1">手机号登录</p>
+            <p class="x" onclick="closeDiv()">X</p>
+        </div>
+        <div class="phone-p">
+            <img src="./images/QQ截图20210205185037.png">
+        </div>
+        <div class="j-mob">
+            <div class="u-phonewrap">
+                <a class="current" href="javascript:;">
+                    <span>+86</span>
+                </a>
+                <div class="txtwrap">
+                    <input style="box-sizing: content-box;" type="text" id="text" placeholder="请输入手机号">
+                </div>    
+            </div>
+            <div class="password">
+                <input type="password" placeholder="请输入密码" id="pw">
+            </div>
+            <div class="f-mg10">
+                <label class="sc3">
+                    <input type="checkbox" checked="checked" class="j-auto">自动登录
+                </label>
+            </div>
+            <button class="getInto" onclick="myClick()">登录</button>
+            <a class="zhuCe">注册</a>
+        </div>
+        <div class="more">
+            <img src="./images/QQ截图20210208174712.png">
+        </div>
+        <div class="u-official-terms">
+            <input type="checkbox" id="j-official-terms">
+            <label for="j-official-terms" style="margin-left: 2px;">同意</label>
+            <a href="https://st.music.163.com/official-terms/service" target="_blank" style="color:#507DAF;">《服务条款》</a>
+            <a href="https://st.music.163.com/official-terms/privacy" target="_blank" style="color:#507DAF;">《隐私政策》</a>
+            <a href="https://st.music.163.com/official-terms/children" target="_blank" style="color:#507DAF;">《儿童隐私条款》</a>
+        </div>
+    </div>
+    <div class="left-list">
+        <div class="list-container" id="listContainer">
+			<div class="btngroups">
+                <p class="btn find" onclick="window.open('index.html','_self')"><i class="fa-music" aria-hidden="true"></i>&nbsp;&nbsp;发现音乐</p>
+				<p class="btn mv"><i class="video" aria-hidden="true"></i>&nbsp;&nbsp;视频</p>
+				<p class="btn friends"><i class="friend" aria-hidden="true"></i>&nbsp;&nbsp;朋友</p>
+                <p class="btn zhibo"><i class="fa zhibo" aria-hidden="true"></i>&nbsp;&nbsp;直播</p>
+                <p class="btn fm"><i class="fa fm" aria-hidden="true"></i>&nbsp;&nbsp;私人FM</p>
+			</div>
+        </div>
+        <div class="list list-me">
+            <p class="title">我的音乐</p>
+            <div class="btngroups2">
+                <p class="btn local">
+                    <i class="fa fa-local">&nbsp;&nbsp;本地音乐</i>
+                </p>
+                <p class="btn download">
+                    <i class="fa fa-download">&nbsp;&nbsp;下载管理</i>
+                </p>
+                <p class="btn cloud">
+                    <i class="fa fa-cloud">&nbsp;&nbsp;我的音乐云盘</i>
+                </p>
+                <p class="btn singers">
+                    <i class="fa fa-singers">&nbsp;&nbsp;我的歌手</i>
+                </p>
+                <p class="btn me-mv">
+                    <i class="fa fa-me-mv">&nbsp;&nbsp;我的MV</i>
+                </p>
+                <p class="btn me-fm">
+                    <i class="fa fa-me-fm">&nbsp;&nbsp;我的电台</i>
+                </p>  
+            </div>
+        </div>
+        <div class="list list-create">
+            <p class="title">创建的歌单
+                <span class="title-btngroups">
+                    <a href="javascript:void(0);" class="btn addlist">
+                        <i class="fa fa-plus-circle"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="btn unfoldlist">
+                        <i class="fa fa-angle-down"></i>+
+                    </a>
+                </span>
+            </p>
+            <div class="btngroups2">
+                <p class="btn list-create-like active">
+                    <i class="fa fa-heart-o">&nbsp;&nbsp;孙燕姿</i>
+                </p>
+            </div>
+        </div>
+        <div class="list list-collect">
+            <p class="title">收藏的歌单
+                <span class="title-btngroups">
+                    <a href="javascript:void(0);" class="btn unfoldlist"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                </span>
+            </p>
+            <div class="btngroups">
+                <p class="btn list_collect_id001"><i class="fa fa-music" aria-hidden="true"></i>&nbsp;&nbsp;前端学习</p>
+            </div>
+        </div>
+        <!-- 全屏小窗 -->
+		<div class="playlist-smallwindow clearfix">
+			<div class="poster" id="btnExpandPlayBox">
+				<img src="./images/temp_pic001.jpg" alt="" id="smallwindow-albumPic" />
+				<div class="poster-hoverback"><i class="fa fa-expand" aria-hidden="true"></i></div>
+			</div>
+			<div class="info">
+				<p class="songname" id="smallwindow-songName">适合前端学习的音乐</p>
+				<p class="singername" id="smallwindow-singerName">红岩人</p>
+			</div>
+			<div class="btngroups">
+				<div class="btn collect"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+				<div class="btn share"><i class="fa fa-share-square-o" aria-hidden="true"></i></div>
+			</div>
+		</div>
+    </div>
+    <div class="play-result">
+        <div>
+            <img>
+            <span></span>
+            <div>
+                <img>
+                <span></span>
+            </div>
+            <div>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
+        </div>
+
+    </div>
+        <!-- 底部音乐播放器 -->
+        <div class="audio-box">
+            <div class="audio-container">
+                
+                <!-- 上一曲、播放暂停、下一曲 -->
+                <div class="audio-select1">
+                    <div class="audio-prev"></div>
+                    <div class="audio-play"></div>
+                    <div class="audio-next"></div>
+                </div>            
+    
+                <!-- 歌曲封面 -->
+                <div class="audio-cover"></div>
+    
+                <!-- 进度条 -->
+                <div class="audio-body">
+                    <h3 class="audio-title">未知歌曲</h3>
+                    <div class="audio-backs">
+                        <div class="audio-setbacks">
+                            <!-- 红色进度条 -->
+                            <i class="audio-this-setbacks">
+                                <span class="audio-backs-btn"></span>
+                            </i>
+                            <span class="audio-cache-setbacks"></span>
+                        </div>
+                        <!-- 当前播放时间 -->
+                        <div class="audio-this-time">00:00</div>
+                        <span class="slash">/</span>
+                        <!-- 总播放时长 -->
+                        <div class="audio-count-time">00:00</div>
+                    </div>
+                </div>       
+    
+                <!-- 右侧按钮区 -->
+                <div class="audio-btn">
+                    <div class="audio-select2">
+                        <div class="audio-collecting"></div>
+                        <div class="audio-sharing"></div>
+                        <div class="audio-volume"></div>
+                        <div class="audio-mode"></div>
+                        <div class="audio-menu"></div>
+                    </div>
+                
+                    <!-- 音量条 -->
+                    <div class="audio-set-volume">
+                        <div class="volume-box">
+                            <i><span></span></i>
+                        </div>
+                    </div>
+                
+                    <!-- 歌曲列表 -->
+                
+                    <div class="audio-list">
+                        <div class="audio-list-head">
+                            <p>播放列表</p>
+                            <span class="menu-close">关闭</span>
+                        </div>
+                        <ul class="audio-inline"></ul>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+<script src="./index.js"></script>
+<script src="./playlist.js"></script>      
+</body>
+
+</html>

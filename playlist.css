@@ -1,0 +1,126 @@
+.play-result{
+    margin-left: 220px;
+    margin-top: 60px;
+    height: 760px;
+}
+.list-header{
+    height: 200px;
+    padding-top: 10px;
+    padding-left: 30px;
+}
+.list-header img{
+    float: left;
+    width: 165px;
+    height: 165px;
+}
+.autor{
+    margin-left: 195px;
+    margin-top: 14px;
+    height: 30px;
+}
+.autor img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.autor span{
+    padding-left: 20px;
+    padding-top: 1px;
+}
+.list-name{
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 30px;
+}
+.bts{
+    padding-left: 198px;
+    padding-top: 10px;
+}
+.bt1{
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    border:  #fcfcfc;
+    outline: none;
+    background-color: #eb5e5e;
+    font-size: 14px;
+    color: #fcfcfc;
+    cursor: pointer;
+}
+.bt2{
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    background-color: #fcfcfc;
+    margin-left: 10px;
+    cursor: pointer;
+    
+}
+.label{
+    padding-left: 195px;
+    padding-top: 10px;
+    display: block;
+}
+.list-index{
+    margin-top: 50px;
+}
+.list-index a{
+    padding-left: 20px;
+    cursor: pointer;
+}
+.inline-index{
+    border-top: 1px solid  #cdcdcd;
+}
+.songList{
+    text-align: center;
+     height: 760px;
+     width: 100%;
+ }
+ .songList tr td{
+    background-color: #f7f7f7;
+    height: 20px;
+    
+}
+.songList table:nth-child(2n){
+    background-color: white;
+}
+.songList tr td a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 1px solid transparent;
+    text-align: center;
+    padding: 5px;
+    
+}
+.songList tr td a img{
+    max-width: 15px;
+    line-height: 20px;
+    cursor: pointer;
+    display: block;
+
+}
+.songList img{
+    width: 2opx;
+    height: 20px;
+}
+.songList tr :nth-child(1){
+    width: 40px;
+}
+.songList tr :nth-child(2){
+    width: 40px;
+}
+.songList tr :nth-child(3){
+    width: 200px;
+}
+.songList tr :nth-child(4){
+    width: 200px;
+}
+.songList tr :nth-child(5){
+    width: 300px;
+}
+.songList tr :nth-child(6){
+    width: 200px;
+}

@@ -1,0 +1,77 @@
+
+#songlist{
+    margin-left: 220px;
+    margin-top: 60px;
+    height: 790px;
+}
+.total{
+    padding-top: 17px;
+    padding-left: 32px;
+}
+.total i{
+    font-size: 15px;
+    font-weight: bold;
+}
+.search{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.btn2:hover{
+    background-color: none;
+    color: black;
+}
+.btn2{
+    padding-left: 10px;
+}
+.fa2{
+    cursor: pointer;
+    color: #656567;
+}
+.fa2:hover{
+    color: #000;
+}
+.search-result-header{
+    margin-top: 20px;
+    border-top:1px solid #dadadc;
+}
+.search-result-header>span{
+   color: #656567;
+}
+.header-index1{
+    padding-left: 130px;
+    padding-right: 400px;
+}
+.header-index2{
+    padding-right: 215px;
+}
+.header-index3{
+    padding-right: 230px;
+}
+
+#search-list
+    {
+
+    }
+    .a,.b,.c,.d
+    {
+      line-height: 30px;
+      display: inline-block;
+      font-size: 14px;
+    }
+    .a
+    {
+     width: 450px;
+     padding-left: 130px;
+    }
+    .b
+    {
+
+      width: 250px;
+    }
+    .c
+    {
+        width: 250px;
+    }   
+#search-list:hover{
+    background-color:  #656567;
+}
