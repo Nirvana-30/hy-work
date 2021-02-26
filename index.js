@@ -79,7 +79,7 @@ function prePic() {
   }
   index = index - 1;
   if (index < 0) {
-    index = 8;
+    index = 9;
   }
   setLineBColor();
 }
@@ -113,6 +113,7 @@ bhr.onreadystatechange = () => {
       var uCover_2 = document.querySelectorAll('.u-cover-2');
       for(var i = 0;i<3;i++){
        uCover_2[i].querySelector('img').src = res.result[i].picUrl;
+       uCover_2[i].querySelector('a').style.backgroundSize=100+'%';
       };
     } else {
       console.log('请求失败');
