@@ -193,8 +193,10 @@ var into = document.getElementsByClassName('into')[0];
         };
         dhr.send();
     }
+    const result =sendAjax('get','http://sandyz.ink:3000/personalized/mv/exclusive/rcmd')
+    console.log(result)
 
-    
+
     
    
     
